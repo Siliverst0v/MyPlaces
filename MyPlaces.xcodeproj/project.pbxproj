@@ -17,9 +17,12 @@
 		A47868DD27E7CC5E004D8A0E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47868DC27E7CC5E004D8A0E /* CustomTableViewCell.swift */; };
 		A4C7600427E9151D00F8CA86 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7600327E9151D00F8CA86 /* PlaceModel.swift */; };
 		A4C7600627E9205000F8CA86 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7600527E9205000F8CA86 /* NewPlaceViewController.swift */; };
+		F7B6614E5DF8CAC44D02C4E7 /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A5AD2380AF784DC2974561 /* Pods_MyPlaces.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79C36241901D8822E04D4618 /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
+		83A5AD2380AF784DC2974561 /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47868C027E78AE8004D8A0E /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47868C327E78AE8004D8A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47868C527E78AE8004D8A0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		A47868DC27E7CC5E004D8A0E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A4C7600327E9151D00F8CA86 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		A4C7600527E9205000F8CA86 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
+		E5DB7C9BF055BF74EF4FFECA /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7B6614E5DF8CAC44D02C4E7 /* Pods_MyPlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A6843C5ABF3545F9A7CAE4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83A5AD2380AF784DC2974561 /* Pods_MyPlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F24740E7D8CBF7EB8E7A612 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79C36241901D8822E04D4618 /* Pods-MyPlaces.debug.xcconfig */,
+				E5DB7C9BF055BF74EF4FFECA /* Pods-MyPlaces.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A47868B727E78AE8004D8A0E = {
 			isa = PBXGroup;
 			children = (
 				A47868C227E78AE8004D8A0E /* MyPlaces */,
 				A47868C127E78AE8004D8A0E /* Products */,
+				8F24740E7D8CBF7EB8E7A612 /* Pods */,
+				3A6843C5ABF3545F9A7CAE4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +111,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A47868D727E78AE9004D8A0E /* Build configuration list for PBXNativeTarget "MyPlaces" */;
 			buildPhases = (
+				5AF9997765DA659F4065185E /* [CP] Check Pods Manifest.lock */,
 				A47868BC27E78AE8004D8A0E /* Sources */,
 				A47868BD27E78AE8004D8A0E /* Frameworks */,
 				A47868BE27E78AE8004D8A0E /* Resources */,
@@ -144,6 +170,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AF9997765DA659F4065185E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyPlaces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A47868BC27E78AE8004D8A0E /* Sources */ = {
@@ -300,6 +351,7 @@
 		};
 		A47868D827E78AE9004D8A0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79C36241901D8822E04D4618 /* Pods-MyPlaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -328,6 +380,7 @@
 		};
 		A47868D927E78AE9004D8A0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5DB7C9BF055BF74EF4FFECA /* Pods-MyPlaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
