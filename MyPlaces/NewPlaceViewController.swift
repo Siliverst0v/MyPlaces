@@ -9,7 +9,7 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController, UINavigationControllerDelegate {
     
-    var newPlace: Place?
+    var newPlace = Place()
     var imageIsChanged = false
     
     @IBOutlet weak var placeImage: UIImageView!
@@ -21,6 +21,11 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.isEnabled = false
+        
+        DispatchQueue.main.async {
+            self.newPlace.savePlaces()
+        }
+       
         
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
@@ -71,11 +76,11 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
         
-        newPlace = Place(name: placeName.text!,
-                         location: placeLocation.text,
-                         type: placeType.text,
-                         image: image,
-                         restaurantImage: nil)
+//        newPlace = Place(name: placeName.text!,
+//                         location: placeLocation.text,
+//                         type: placeType.text,
+//                         image: image,
+//                         restaurantImage: nil)
     }
     
     @IBAction func cancelAction(_ sender: Any) {
