@@ -22,14 +22,14 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.isEnabled = false
-       
+        
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
         setupEditScreen()
         
     }
     
-// MARK: - Table view delegate
+    // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
@@ -50,7 +50,7 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
             }
             photo.setValue(photoIcon, forKey: "image")
             photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
-
+            
             
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
@@ -64,6 +64,9 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
         }
         
     }
+    
+    //MARK: - Methods
+    
     func savePlace() {
         
         var image: UIImage?
@@ -89,7 +92,7 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
                 currentPlace?.imageData = newPlace.imageData
             }
         } else {
-        StorageManager.saveObject(newPlace)
+            StorageManager.saveObject(newPlace)
         }
     }
     
@@ -121,6 +124,7 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
         saveButton.isEnabled = true
     }
     
+    //MARK: - IBActions
     
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
