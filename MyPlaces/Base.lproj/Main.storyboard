@@ -196,13 +196,14 @@
                         <outlet property="placeLocation" destination="dkZ-OH-9OH" id="4yG-I6-rcR"/>
                         <outlet property="placeName" destination="MKK-Vp-oRC" id="Ych-3G-czL"/>
                         <outlet property="placeType" destination="XbG-bP-TGH" id="Ehn-Tp-8yL"/>
+                        <outlet property="ratingControl" destination="VHx-ek-4HB" id="zaC-Rf-Qry"/>
                         <outlet property="saveButton" destination="aRG-X3-ist" id="YTQ-Xf-r5S"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOF-kn-s69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="eTC-wK-rGK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="-88"/>
+            <point key="canvasLocation" x="1273.913043478261" y="-88.392857142857139"/>
         </scene>
         <!--My Places-->
         <scene sceneID="uiC-gY-Ja6">
@@ -231,50 +232,66 @@
                                                         <constraint firstAttribute="height" constant="65" id="Moe-VA-WqQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRb-DJ-iMt">
-                                                    <rect key="frame" x="95" y="9" width="299" height="21"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="keb-oI-PJc">
+                                                    <rect key="frame" x="95" y="9" width="213" height="66"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRb-DJ-iMt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="3aP-Up-Tnp"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-iL-86V">
+                                                            <rect key="frame" x="0.0" y="24" width="55.5" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="1rj-jT-L7c"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3l-Ov-zqY">
+                                                            <rect key="frame" x="0.0" y="45" width="27.5" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="rE9-6s-L9Y"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="16" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-6j-RxR" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="316" y="34.5" width="90" height="16"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="3aP-Up-Tnp"/>
+                                                        <constraint firstAttribute="width" constant="90" id="piL-yE-BxO"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-iL-86V">
-                                                    <rect key="frame" x="95" y="35" width="315" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="1rj-jT-L7c"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3l-Ov-zqY">
-                                                    <rect key="frame" x="95" y="54" width="299" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="rE9-6s-L9Y"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="i1Q-iL-86V" firstAttribute="trailing" secondItem="Pkc-Qz-I2y" secondAttribute="trailingMargin" constant="16" id="5kr-rX-smK"/>
-                                                <constraint firstItem="i1Q-iL-86V" firstAttribute="top" secondItem="YRb-DJ-iMt" secondAttribute="bottom" constant="5" id="CSN-jb-EQv"/>
+                                                <constraint firstItem="keb-oI-PJc" firstAttribute="top" secondItem="Pkc-Qz-I2y" secondAttribute="top" constant="9" id="6Jm-n4-RDW"/>
                                                 <constraint firstItem="e6M-Z2-Dea" firstAttribute="centerY" secondItem="Pkc-Qz-I2y" secondAttribute="centerY" id="Dls-fA-j9h"/>
-                                                <constraint firstAttribute="bottom" secondItem="t3l-Ov-zqY" secondAttribute="bottom" constant="10" id="FYE-fo-EyB"/>
-                                                <constraint firstAttribute="trailing" secondItem="YRb-DJ-iMt" secondAttribute="trailing" constant="20" symbolic="YES" id="OZz-IJ-sGw"/>
-                                                <constraint firstItem="t3l-Ov-zqY" firstAttribute="leading" secondItem="e6M-Z2-Dea" secondAttribute="trailing" constant="15" id="V1h-SP-7GM"/>
-                                                <constraint firstItem="t3l-Ov-zqY" firstAttribute="top" secondItem="i1Q-iL-86V" secondAttribute="bottom" constant="1" id="gRc-1i-Idq"/>
-                                                <constraint firstItem="YRb-DJ-iMt" firstAttribute="top" secondItem="Pkc-Qz-I2y" secondAttribute="top" constant="9" id="kVa-ZL-y2L"/>
+                                                <constraint firstAttribute="bottom" secondItem="keb-oI-PJc" secondAttribute="bottom" constant="10" id="H8W-if-FIV"/>
+                                                <constraint firstItem="HJC-6j-RxR" firstAttribute="leading" secondItem="keb-oI-PJc" secondAttribute="trailing" constant="8" id="U2g-mO-QR3"/>
+                                                <constraint firstItem="HJC-6j-RxR" firstAttribute="centerY" secondItem="Pkc-Qz-I2y" secondAttribute="centerY" id="aCs-Uy-kcS"/>
+                                                <constraint firstAttribute="trailing" secondItem="HJC-6j-RxR" secondAttribute="trailing" constant="8" id="fu2-lS-rf8"/>
                                                 <constraint firstItem="e6M-Z2-Dea" firstAttribute="leading" secondItem="Pkc-Qz-I2y" secondAttribute="leading" constant="15" id="mHO-3m-ohg"/>
-                                                <constraint firstAttribute="trailing" secondItem="t3l-Ov-zqY" secondAttribute="trailing" constant="20" symbolic="YES" id="sxZ-Xq-iif"/>
-                                                <constraint firstItem="i1Q-iL-86V" firstAttribute="leading" secondItem="e6M-Z2-Dea" secondAttribute="trailing" constant="15" id="tOO-sn-cBV"/>
-                                                <constraint firstItem="YRb-DJ-iMt" firstAttribute="leading" secondItem="e6M-Z2-Dea" secondAttribute="trailing" constant="15" id="vRT-zR-mEw"/>
+                                                <constraint firstItem="keb-oI-PJc" firstAttribute="leading" secondItem="e6M-Z2-Dea" secondAttribute="trailing" constant="15" id="oMC-0Z-MAb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="HJC-6j-RxR" id="0Rx-BB-9jM"/>
                                             <outlet property="imageOfPlace" destination="e6M-Z2-Dea" id="dx2-vv-H9q"/>
                                             <outlet property="locationLabel" destination="i1Q-iL-86V" id="ulI-Zk-R9i"/>
                                             <outlet property="nameLabel" destination="YRb-DJ-iMt" id="b50-io-Wbb"/>
@@ -375,6 +392,8 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="emptyStar" width="255" height="256"/>
+        <image name="filledStar" width="237.5" height="238"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
