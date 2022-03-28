@@ -30,10 +30,25 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-dL-Wpz">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81x-nw-OQT">
+                                                    <rect key="frame" x="344" y="189" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="bY0-8F-HZ1"/>
+                                                        <constraint firstAttribute="width" constant="50" id="gHs-MO-euA"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="" image="map"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="map" title=""/>
+                                                    <connections>
+                                                        <segue destination="KZ4-fC-440" kind="presentation" identifier="showMap" id="qBf-de-QwG"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="81x-nw-OQT" firstAttribute="trailing" secondItem="UhR-YW-qt6" secondAttribute="trailingMargin" id="BjI-9l-9NS"/>
                                                 <constraint firstAttribute="bottom" secondItem="EfJ-dL-Wpz" secondAttribute="bottom" id="EAw-kS-2qa"/>
+                                                <constraint firstItem="81x-nw-OQT" firstAttribute="bottom" secondItem="UhR-YW-qt6" secondAttribute="bottomMargin" id="RUh-be-Q1m"/>
                                                 <constraint firstAttribute="trailing" secondItem="EfJ-dL-Wpz" secondAttribute="trailing" id="cSN-vA-kq5"/>
                                                 <constraint firstItem="EfJ-dL-Wpz" firstAttribute="leading" secondItem="UhR-YW-qt6" secondAttribute="leading" id="eBg-d8-BFa"/>
                                                 <constraint firstItem="EfJ-dL-Wpz" firstAttribute="top" secondItem="UhR-YW-qt6" secondAttribute="top" id="o6S-hT-qZF"/>
@@ -204,6 +219,52 @@
                 <exit id="eTC-wK-rGK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1273.913043478261" y="-88.392857142857139"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="DiA-Qy-QRQ">
+            <objects>
+                <viewController id="KZ4-fC-440" customClass="MapViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sZw-v5-MIg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHU-d0-ygG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iu1-nU-8JI">
+                                <rect key="frame" x="344" y="40" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="ZlK-oR-dUL"/>
+                                    <constraint firstAttribute="height" constant="30" id="wUk-wr-uR2"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="camcel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeVC" destination="KZ4-fC-440" eventType="touchUpInside" id="QOV-Bk-aoU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r2O-fb-j7b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hHU-d0-ygG" firstAttribute="leading" secondItem="r2O-fb-j7b" secondAttribute="leading" id="7yR-BT-YDd"/>
+                            <constraint firstItem="Iu1-nU-8JI" firstAttribute="top" secondItem="r2O-fb-j7b" secondAttribute="top" constant="40" id="7zc-6i-F0g"/>
+                            <constraint firstItem="hHU-d0-ygG" firstAttribute="top" secondItem="sZw-v5-MIg" secondAttribute="top" id="DBE-xU-RF1"/>
+                            <constraint firstAttribute="bottom" secondItem="hHU-d0-ygG" secondAttribute="bottom" id="LZK-IH-vpP"/>
+                            <constraint firstItem="hHU-d0-ygG" firstAttribute="trailing" secondItem="r2O-fb-j7b" secondAttribute="trailing" id="UHg-wt-jX4"/>
+                            <constraint firstItem="r2O-fb-j7b" firstAttribute="trailing" secondItem="Iu1-nU-8JI" secondAttribute="trailing" constant="40" id="YGP-Ug-KHn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="hHU-d0-ygG" id="Zsg-2b-ECd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxv-Ne-fqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2050.7246376811595" y="-88.392857142857139"/>
         </scene>
         <!--My Places-->
         <scene sceneID="uiC-gY-Ja6">
@@ -392,8 +453,10 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
+        <image name="map" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
